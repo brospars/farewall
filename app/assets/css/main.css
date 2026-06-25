@@ -2,17 +2,57 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'Manrope', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  /* Remap 'orange' to warm terracotta — keeps primary: 'orange' working in app.config.ts */
+  --color-orange-50: #fff9f3;
+  --color-orange-100: #ffe8d8;
+  --color-orange-200: #ffd4b9;
+  --color-orange-300: #f6b895;
+  --color-orange-400: #e8916a;
+  --color-orange-500: #c9683a;
+  --color-orange-600: #9f452d;
+  --color-orange-700: #7d3421;
+  --color-orange-800: #6a3823;
+  --color-orange-900: #451d12;
+  --color-orange-950: #2a0f08;
+}
+
+html,
+body {
+  background-color: #fff9f3;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+}
+
+/* Glass morphism card */
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255, 249, 243, 0.95), rgba(255, 236, 219, 0.82));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Warm brown shadows */
+.warm-shadow {
+  box-shadow: 0 14px 32px rgba(159, 69, 45, 0.16);
+}
+
+.warm-shadow-lg {
+  box-shadow: 0 24px 60px rgba(106, 56, 35, 0.12);
+}
+
+/* Atmospheric background orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  pointer-events: none;
+  opacity: 0.7;
 }
